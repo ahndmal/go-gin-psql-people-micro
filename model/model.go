@@ -1,5 +1,9 @@
 package model
 
+import (
+	"time"
+)
+
 type Cat struct {
 	CatId        int
 	Id           string
@@ -24,9 +28,17 @@ type City struct {
 }
 
 type Person struct {
-	PersonId int64  `json:"person_id"`
-	Id       int64  `json:"id"`
-	Name     string `json:"name"`
-	Gender   string `json:"gender"`
-	Status   string `json:"status"`
+	PersonId    int64  `json:"person_id"`
+	Id          int64  `json:"id"`
+	Name        string `json:"name"`
+	Email       string `json:"email"`
+	Gender      string `json:"gender"`
+	Status      string `json:"status"`
+	CountryCode string `json:"countryCode"`
+	Age         int
+	Cars        int
+	Engaged     bool
+	HasChildren bool      `json:"has_children"`
+	CreatedAt   time.Time `json:"created_at"`
+	CountryId   int       `json:"country_id"`
 }

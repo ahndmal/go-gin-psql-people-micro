@@ -20,15 +20,15 @@ func main() {
 		return
 	}
 	var persons []model.Person
-	db.Table("persons").Where("gender = ?", "male").Find(&persons)
-	fmt.Println(persons)
+	db.Table("persons").Where("gender = ?", "male").Limit(100).Find(&persons)
+	//fmt.Println(persons)
 
 	// ================
 	// GIN
 	route := gin.Default()
-	route.GET("/people", func(ctx *gin.Context) {
+	route.GET("/persons", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
-			"people": "test",
+			"persons": persons,
 		})
 	})
 	err = route.Run()
