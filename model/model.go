@@ -24,8 +24,9 @@ type City struct {
 }
 
 type Person struct {
-	Id     int64  `json:"personId"`
-	Name   string `json:"name"`
-	Gender string `json:"gender"`
-	Status string `json:"status"`
+	PersonId int64  `json:"person_id"`
+	Id       int64  `json:"id"`
+	Name     string `json:"name"`
+	Gender   string `json:"gender"`
+	Status   string `json:"status"`
 }
