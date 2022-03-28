@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"ggithub.com/AndriiMaliuta/go-people-micro/model"
+	"github.com/AndriiMaliuta/go-people-micro/model"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx"
 	"log"
@@ -26,8 +26,18 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	}
+
+	// values
+	values, err := rows.Values()
+	if err != nil {
+		return
+	}
+	fmt.Println(values)
+
+	// scanning rows
 	for rows.Next() {
 		cat := model.Cat{}
+
 		err := rows.Scan(&cat.Id, &cat.Name)
 		cats = append(cats, cat)
 		if err != nil {

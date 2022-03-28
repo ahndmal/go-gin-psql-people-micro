@@ -1,0 +1,8 @@
+links:
+  cats: "https://api.thecatapi.com/v1/breeds"
+  countries: "https://restcountries.com/v3.1/all"
+  #    name: "https://restcountries.com/v3.1/name/"
+  cities: "https://restcountries.com/v3.1/capital/{capital}"
+  persons: "https://gorest.co.in/public/v1/users"
+  cars: "https://the-vehicles-api.herokuapp.com/brands/"
+  random_user: "https://randomuser.me/api"

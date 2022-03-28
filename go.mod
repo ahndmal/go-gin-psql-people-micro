@@ -1,4 +1,4 @@
-module ggithub.com/AndriiMaliuta/go-people-micro
+module github.com/AndriiMaliuta/go-people-micro
 
 go 1.17
 
