@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	dsn := fmt.Sprintf("host=%s user=hostman password=%s dbname=database port=%s sslmode=disable",
+	dsn := fmt.Sprintf("host=%s user=dev password=%s dbname=people port=%s sslmode=disable",
 		os.Getenv("DB_HOST"), os.Getenv("DB_PASS"), os.Getenv("DB_PORT"))
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
